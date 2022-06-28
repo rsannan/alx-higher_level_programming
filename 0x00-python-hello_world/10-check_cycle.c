@@ -2,10 +2,11 @@
 
 int check_cycle(listint_t *list)
 {
+	listint_t *current;
+
 	if (list == NULL)
 		return(0);
 
-	listint_t *current;
 	current = list;
 	while (current != NULL && current->next != NULL)
 	{
