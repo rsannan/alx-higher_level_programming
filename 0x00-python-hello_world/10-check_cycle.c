@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <stddef.h>
 #include "lists.h"
 
 int check_cycle(listint_t *list)
@@ -11,9 +8,9 @@ int check_cycle(listint_t *list)
 	current = list;
 	while (current != NULL && current->next != NULL)
 	{
-		if (current->id == 2)
+		if (current->id == 'A')
 			return(1);
-		current->id = 2;
+		current->id = 'A';
 		current = current->next;
 	}
 	return (0);

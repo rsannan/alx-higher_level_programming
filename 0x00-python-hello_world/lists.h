@@ -2,6 +2,8 @@
 #define LISTS_H
 
 #include <stdlib.h>
+#include <stddef.h>
+#include <stdio.h>
 
 /**
  * struct listint_s - singly linked list
@@ -15,7 +17,7 @@ typedef struct listint_s
 {
     int n;
     struct listint_s *next;
-    int id;
+    char id;
 } listint_t;
 
 size_t print_listint(const listint_t *h);
