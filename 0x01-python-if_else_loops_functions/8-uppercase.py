@@ -8,5 +8,5 @@ def make_upper(letter):
 def uppercase(str):
     upper_string = ""
     for letter in str:
-        upper_string = upper_string + make_upper(letter)
+        upper_string += "{}".format(letter)
     print({}.format(upper_string))
