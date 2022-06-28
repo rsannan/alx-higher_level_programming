@@ -3,11 +3,11 @@
 int check_cycle(listint_t *list)
 {
 	listint_t *current;
-	if (list == NULL)
-		return(0);
 	current = list;
 	while (current != NULL && current->next != NULL)
 	{
+		if (current->next == head)
+			return(1);
 		if (current->id == 'A')
 			return(1);
 		current->id = 'A';
