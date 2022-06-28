@@ -9,4 +9,4 @@ def uppercase(str):
     upper_string = ""
     for letter in str:
         upper_string += "%c" % make_upper(letter)
-    print({}.format(upper_string))
+    print("{}".format(upper_string))
