@@ -8,13 +8,12 @@ int check_cycle(listint_t *list)
 	listint_t *current;
 	
 	current = list;
-	while (current != NULL)
+	while (current != NULL && current->next !=NULL)
 	{
 		if (current->id == 2)
 			return(1);
 		current->id = 2;
 		current = current->next;
 	}
-	free_listint(current);
 	return (0);
 }
