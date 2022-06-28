@@ -6,7 +6,6 @@
 int check_cycle(listint_t *list)
 {
 	listint_t *current;
-	int i = 2;
 	
 	current = list;
 	while (current != NULL)
@@ -14,7 +13,7 @@ int check_cycle(listint_t *list)
 		if (current->id == 2)
 			return(1);
 		else
-			current->id = i;
+			current->id = 2;
 		
 		current = current->next;
 	}
