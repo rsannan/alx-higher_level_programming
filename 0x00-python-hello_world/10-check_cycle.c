@@ -6,8 +6,9 @@ int check_cycle(listint_t *list)
 	current = list;
 	while (current != NULL && current->next != NULL)
 	{
-		if (current->next == head)
+		if (current->next == list)
 			return(1);
+
 		if (current->id == 'A')
 			return(1);
 		current->id = 'A';
