@@ -18,5 +18,6 @@ int check_cycle(listint_t *list)
 		
 		current = current->next;
 	}
+	free_listint(current);
 	return (0);
 }
