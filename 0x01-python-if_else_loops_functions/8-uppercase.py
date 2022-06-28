@@ -4,8 +4,9 @@ def make_upper(letter):
         return(chr(ord(letter)- 32))
     else:
         return(chr(ord(letter)))
+
 def uppercase(str):
     upper_string = ""
     for letter in str:
-        upper_string += make_upper(letter)
+        upper_string = upper_string + make_upper(letter)
     print({}.format(upper_string))
