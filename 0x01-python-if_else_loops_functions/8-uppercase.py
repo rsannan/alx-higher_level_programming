@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 def make_upper(letter):
     if 96 < ord(letter) < 123:
-        return(chr(ord(letter)- 32))
+        return(chr(ord(letter) - 32))
     else:
         return(chr(ord(letter)))
+
 
 def uppercase(str):
     upper_string = ""
