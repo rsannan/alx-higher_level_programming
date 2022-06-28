@@ -12,9 +12,7 @@ int check_cycle(listint_t *list)
 	{
 		if (current->id == 2)
 			return(1);
-		else
-			current->id = 2;
-		
+		current->id = 2;
 		current = current->next;
 	}
 	free_listint(current);
