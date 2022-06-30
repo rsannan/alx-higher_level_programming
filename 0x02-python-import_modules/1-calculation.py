@@ -7,8 +7,7 @@ if __name__ == "__main__":
     sub_total = calc.sub(a, b)
     mul_total = calc.mul(a, b)
     div_total = calc.div(a, b)
-    
-    print("{:d} + {:d} = {add_total}")
-    print("{:d} - {:d} = {sub_total}")
-    print("{:d} * {:d} = {mul_total}")
-    print("{:d} / {:d} = {div_total}")
+    print("{:d} + {:d} = {:d}".format(a, b, add_total))
+    print("{:d} - {:d} = {:d}".format(a, b, sub_total))
+    print("{:d} * {:d} = {:d}".format(a, b, mul_total))
+    print("{:d} / {:d} = {:d}".format(a, b, div_total))
