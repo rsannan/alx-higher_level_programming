@@ -8,11 +8,11 @@ if __name__ == "__main__":
 
     elif arg_num == 1:
         index_num += 1
-        print("{:d} argument".format(arg_num))
+        print("{:d} argument:".format(arg_num))
         print("{:d}: {}".format(arg_num, sys.argv[index_num]))
 
     elif arg_num > 1:
-        print("{:d} arguments".format(arg_num))
+        print("{:d} arguments:".format(arg_num))
         for arg in range(arg_num):
             index_num += 1
             print("{:d}: {}".format(index_num, sys.argv[index_num]))
