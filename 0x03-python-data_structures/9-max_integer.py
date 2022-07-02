@@ -2,8 +2,8 @@
 def max_integer(my_list=[]):
     list_idx = len(my_list)
     max_num = 0
-    if list_idx < 1:
-        return
+    if list_idx == 0:
+        return None
 
     for number in my_list:
         if number < max_num:
