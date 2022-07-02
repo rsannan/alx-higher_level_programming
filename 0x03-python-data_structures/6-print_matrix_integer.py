@@ -7,4 +7,4 @@ def print_matrix_integer(matrix=[[]]):
             if mat_list[-1] == number:
                 print("{:d}".format(number),)
             else:
-                print("{:d}".format(number), end = "")
+                print("{:d}".format(number), end = " ")
