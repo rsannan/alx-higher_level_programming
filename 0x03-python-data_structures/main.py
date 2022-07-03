@@ -6,7 +6,7 @@ matrix = [
     [4, 5, 6],
     [7, 8, 9]
 ]
-mat1 = [1, 2, 3]
+mat1 = [[1, 2, 3]]
 
 print_matrix_integer(mat1)
 print("--")
