@@ -52,9 +52,13 @@ return (count);
 
 int is_palindrome(listint_t **head)
 {
-	int list_len = listint_len(*head);
-	int i_bottom = list_len - 1;
-	int i_top = 0;
+	int list_len, i_bottom, i_top;
+	if(*head == NULL)
+		return (1);
+
+	list_len = listint_len(*head);
+	i_bottom = list_len - 1;
+	i_top = 0;
 	return(check_palindrome(i_top, i_bottom, list_len, *head));
 
 }
