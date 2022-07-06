@@ -4,6 +4,9 @@ def roman_to_int(roman_string):
                   'D': 500, 'M': 1000}
     if isinstance(roman_string, str) and roman_string is not None:
         for letter in range(len(roman_string)):
+            if roman_string[letter] not in roman_dict:
+                sum_letter = sum_letter + 0
+                continue
             c_letter = roman_dict.get(roman_string[letter])
             if letter != 0:
                 p_letter = roman_dict.get(roman_string[letter-1])
