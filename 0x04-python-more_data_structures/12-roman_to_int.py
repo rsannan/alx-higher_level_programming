@@ -5,17 +5,17 @@ def roman_to_int(roman_string):
     sum_letter = 0
     if isinstance(roman_string, str) and roman_string is not None:
         for letter in range(len(roman_string)):
-            if roman_string[letter].upper() not in roman_dict:
+            if roman_string[letter] not in roman_dict:
                 sum_letter = sum_letter + 0
                 continue
 
-            c_letter = roman_dict.get(roman_string[letter].upper())
+            c_letter = roman_dict.get(roman_string[letter])
 
             if letter == 0:
                 sum_letter = c_letter
 
             else:
-                p_letter = roman_dict.get(roman_string[letter-1].upper())
+                p_letter = roman_dict.get(roman_string[letter-1])
                 if c_letter > p_letter:
                     sum_letter = c_letter - p_letter
                 else:
