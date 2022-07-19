@@ -8,8 +8,8 @@ class Square:
         """Initializes the data
            size(int): Size of the square
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -38,7 +38,7 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
 
         else:
-            self.__size = value
+            self.__position = value
 
     def area(self):
         """Returns the Area of the Square"""
