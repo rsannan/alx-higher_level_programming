@@ -6,6 +6,8 @@ class Square:
     """Square class definition"""
     def __init__(self, size=0, position=(0, 0)):
         """Initializes the data
+
+        Args:
            size(int): Size of the square
            position (int, int): The position of the new square.
         """
@@ -14,6 +16,7 @@ class Square:
 
     @property
     def size(self):
+        """Get/set the current size of the square."""
         return self.__size
 
     @size.setter
@@ -29,6 +32,7 @@ class Square:
 
     @property
     def position(self):
+        """Get/set the current position of the square."""
         return self.__position
 
     @position.setter
