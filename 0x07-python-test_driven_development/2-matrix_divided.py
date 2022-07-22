@@ -1,5 +1,14 @@
 #!/usr/bin/python3
+"""
+Module contains matrix_divide
+This defines a function that divides elements in a matrix
+This function 
+"""
+
 def matrix_divided(matrix, div):
+	"""
+            Divides elements in a matrix by div
+	"""
     if (not isinstance(matrix, list)
         or not all(isinstance(element, list) for element in matrix)):
         #or not isinstance(matrix[i][j], (int, float))
