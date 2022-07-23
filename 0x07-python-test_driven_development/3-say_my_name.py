@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This module defines the say_my_name function"""
 
+
 def say_my_name(first_name, last_name=""):
     """Prints firstname and lastname
 
@@ -9,7 +10,7 @@ def say_my_name(first_name, last_name=""):
             last_name (str): (optional) last name
 
         Returns:
-            None 
+            None
             TypeError Otherwise
     """
     if not isinstance(first_name, str):
