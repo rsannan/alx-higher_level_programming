@@ -1,6 +1,16 @@
 #!/usr/bin/python3
+"""This module defines print_square function"""
 
 def print_square(size):
+    """Prints a square with the character '#'
+
+        Args:
+            size (int): size of the square 
+
+        Returns:
+            None
+            TypeError, ValueError Otherwise
+    """
     if isinstance(size, float):
         if size < 0.0:
             raise TypeError('size must be an integer')

@@ -1,25 +1,33 @@
 #!/usr/bin/python3
-"""
-Module contains matrix_divide
-This defines a function that divides elements in a matrix
-This function 
-"""
+"""This module defines the matrix_divide function"""
 
 def matrix_divided(matrix, div):
-	"""
-            Divides elements in a matrix by div
-	"""
-    if (not isinstance(matrix, list)
-        or not all(isinstance(element, list) for element in matrix)):
-        #or not isinstance(matrix[i][j], (int, float))
-        #for i in matrix for j in range(len(matrix[i]))):
+    """Divides all the elements of a matrix
+
+        Args:
+            matrix (list): 2D nested list of int/floats
+            div (int/float): number to divide by
+
+        Returns:
+            a nested list of divided elements
+            TypeError, ZeroDivisionError Otherwise
+    """
+    bool_mat= not isinstance(matrix, list)
+    bool_matlist = not all(isinstance(element, list) for element in matrix)
+    matele = [matrix[i][j] for i in range(len(matrix)) for j in range(len(matrix[i]))]
+    bool_matele = not all(isinstance(num, (int, float)) for num in matele)
+
+    if (bool_mat or bool_matlist or bool_matele):
             raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
     new_matrix = []
     for i in range(len(matrix)):
         list_matrix = []
         for j in range(len(matrix[i])):
-            if isinstance(div, (int, float)) or\
-                div != 0:
+            if not isinstance(div, (int, float)):
+                raise TypeError('div must be a number')
+            elif div == 0:
+                raise ZeroDivisionError('division by zero')
+            else:
                 number = matrix[i][j] / div
                 list_matrix.append(round(number, 2))
         new_matrix.append(list_matrix)
