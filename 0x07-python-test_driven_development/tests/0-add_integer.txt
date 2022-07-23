@@ -1,6 +1,68 @@
+===========================
+How to Use 0-add_integer.py
+===========================
+
+This module defines an addition function ``add_integer(a, b=98)``.
+
+Using ``add_integer``
+--------------------
+
 >>> add_integer = __import__('0-add_integer').add_integer
->>> add_integer(1, 2)
+>>> add_integer(3, 3)
+6
+
+This function works with negative numbers.
+
+>>> add_integer(5, -2)
 3
 
->>> add_integer(2.2, 3)
+This function also works for floating point numbers.
+
+>>> add_integer(3.0, 3.0)
+6
+
+Floats are casted into integers before output is returned
+
+>>> add_integer(3.9, 2.4)
 5
+
+If only one argument is supplied 'b' defaults to 98
+
+>>> add_integer(2)
+100
+
+FLoats and integers can be added together
+
+>>> add_integer(2, 3.5)
+5
+
+>>> add_integer(-2, -3.5)
+-5
+
+Error Conditions
+----------------
+
+``add_integer()`` in any case expects both arguments if two are provided to be integers or floats.
+When one or both arguments are non_integer or floats a TypeError is raised.
+
+>>> add_integer("rabbit", 2)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer("rabbit")
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+
+The function will fail if infinity is provided.
+
+>>> add_integer(2, float('inf'))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
+
+
+And again with NaN numbers.
+
+>>> add_integer(2, float('nan'))
+Traceback (most recent call last):
+ValueError: cannot convert float NaN to integer
