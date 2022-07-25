@@ -16,7 +16,7 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_unordered_list(self):
         """Test an unordered list of integers."""
-        self.assertEqual(max_integer([1, 2, 4, 3], 4)
+        self.assertEqual(max_integer([1, 2, 4, 3]), 4)
 
     def test_floats(self):
         """Test a list of floats."""
@@ -33,6 +33,7 @@ class TestMaxInteger(unittest.TestCase):
     def test_empty_string(self):
         """Test an empty string."""
         self.assertEqual(max_integer(""), None)
+
 
 if __name__ == '__main__':
     unittest.main()
