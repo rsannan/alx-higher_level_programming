@@ -83,5 +83,5 @@ class Rectangle:
         if (rect1_area >= rect2_area):
             return rect_1
 
-        else (rect2_area > rect1_area):
+        else:
             return rect_2
