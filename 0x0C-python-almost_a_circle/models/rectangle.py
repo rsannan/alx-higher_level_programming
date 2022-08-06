@@ -77,3 +77,42 @@ class Rectangle(Base):
             for j in range(self.__width):
                 print("#", end="")
             print("")
+
+    def __str__(self):
+        return ("[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.__x, self.__y, self.__width, self.__height))
+
+    def update(self, *args, **kwargs):
+        """Updates the values in Rectangle instance
+            Args:
+                args (list): to allow variable number of arguments
+                kwargs (dict): to allow variable number of keyword args
+        """
+        if len(args) > 0:
+            arg_count = 0
+            for arg in args:
+                if arg_count == 0:
+                    self.id = arg
+                elif arg_count == 1:
+                    self.__width = arg
+                elif arg_count == 2:
+                    self.__height = arg
+                elif arg_count == 3:
+                    self.__x = arg
+                elif arg_count == 4:
+                    self.__y = arg
+                arg_count += 1
+            return
+        if kwargs is not None:
+            for key, value in kwargs.items():
+                if key == "height":
+                    self.__height = value
+                elif key == "width":
+                    self.__width = value
+                elif key == "x":
+                    self.__x = value
+                elif key == "y":
+                    self.__y = value
+                elif key == "id":
+                    self.id = value
+            return
