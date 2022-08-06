@@ -82,6 +82,14 @@ class Rectangle(Base):
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.__x, self.__y, self.__width, self.__height))
 
+    def to_dictionary(self):
+        attrs_dict = {
+            "id": self.id,"width": self.width,
+            "height": self.height, "x": self.x,
+            "y": self.y
+        }
+        return attrs_dict
+
     def update(self, *args, **kwargs):
         """Updates the values in Rectangle instance
             Args:
