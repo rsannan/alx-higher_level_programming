@@ -61,3 +61,14 @@ class Base:
             my_str (str): JSON string
         """
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """creates an instance of a class
+            Args:
+                dictionary (dict): double pointer to a dictionary
+        
+        """
+        r1 = cls(1,1)
+        r1.update(**dictionary)
+        return r1
