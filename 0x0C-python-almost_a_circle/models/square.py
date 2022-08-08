@@ -31,8 +31,8 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         attrs_dict = {
-            "id": self.id,"size": self.width,
-             "x": self.x, "y": self.y
+            "id": self.id, "size": self.width,
+            "x": self.x, "y": self.y
         }
         return attrs_dict
 

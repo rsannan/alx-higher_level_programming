@@ -84,7 +84,7 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         attrs_dict = {
-            "id": self.id,"width": self.width,
+            "id": self.id, "width": self.width,
             "height": self.height, "x": self.x,
             "y": self.y
         }
