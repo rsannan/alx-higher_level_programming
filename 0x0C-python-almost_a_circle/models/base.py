@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This module contains Base class definition"""
+"""Defines a base model class."""
 import json
 
 
