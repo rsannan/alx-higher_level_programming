@@ -77,6 +77,7 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
+        """prints a representation of the insyance to stdout"""
         [print("") for i in range(self.__y)]
         for i in range(self.__height):
             [print(" ", end="") for l in range(self.__x)]
@@ -132,3 +133,4 @@ class Rectangle(Base):
                 elif key == "id":
                     self.id = value
             return
+

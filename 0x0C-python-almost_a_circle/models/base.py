@@ -89,3 +89,4 @@ class Base:
                 return [cls.create(**ele) for ele in inst_list_dict]
         except FileNotFoundError:
             return []
+

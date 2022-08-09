@@ -72,3 +72,4 @@ class Square(Rectangle):
                 elif key == "id":
                     self.id = value
             return
+
