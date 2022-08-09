@@ -78,10 +78,12 @@ class Base:
                 dictionary (dict): double pointer to a dictionary
 
         """
-        if dictionary and dictionary != {}:
+        if cls.__name__ == "Rectangle":
             r1 = cls(1, 1)
-            r1.update(**dictionary)
-            return r1
+        else:
+            r1 = cls(1)
+        r1.update(**dictionary)
+        return r1
 
     @classmethod
     def load_from_file(cls):
