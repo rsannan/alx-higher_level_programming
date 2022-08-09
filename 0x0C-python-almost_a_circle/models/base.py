@@ -67,7 +67,7 @@ class Base:
             my_str (str): JSON string
         """
         if (json_string is None or
-        len(json_string) == 0):
+           len(json_string) == 0):
             return []
         return json.loads(json_string)
 
