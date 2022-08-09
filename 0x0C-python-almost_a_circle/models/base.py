@@ -78,9 +78,10 @@ class Base:
                 dictionary (dict): double pointer to a dictionary
 
         """
-        r1 = cls(1, 1)
-        r1.update(**dictionary)
-        return r1
+        if dictionary and dictionary != {}:
+            r1 = cls(1, 1)
+            r1.update(**dictionary)
+            return r1
 
     @classmethod
     def load_from_file(cls):
