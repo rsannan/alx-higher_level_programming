@@ -6,9 +6,9 @@
 """
 import os
 import unittest
-from circle_project import Base
-from circle_project import Rectangle
-from circle_project import Square
+from models.base import Base
+from models.rectangle import Rectangle
+from models.square import Square
 
 
 class Test_Base(unittest.TestCase):
@@ -169,3 +169,7 @@ class TestBase_load_from_file(unittest.TestCase):
     def test_load_from_file_more_than_one_arg(self):
         with self.assertRaises(TypeError):
             Base.load_from_file([], 1)
+
+
+if __name__ == '__main__':
+    unittest.main()

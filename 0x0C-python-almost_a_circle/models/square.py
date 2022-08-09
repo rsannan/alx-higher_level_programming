@@ -30,6 +30,7 @@ class Square(Rectangle):
         self.height = value
 
     def to_dictionary(self):
+        """Returns the dictionary representation of a Square."""
         attrs_dict = {
             "id": self.id, "size": self.width,
             "x": self.x, "y": self.y
@@ -37,6 +38,7 @@ class Square(Rectangle):
         return attrs_dict
 
     def __str__(self):
+        """Returns a string representation of a Square instance."""
         return ("[Square] ({}) {}/{} - {}".format(
             self.id, self.x, self.y, self.width))
 

@@ -72,17 +72,20 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
-        """Prints the Rectangle to stout"""
+        [print("") for i in range(self.__y)]
         for i in range(self.__height):
+            [print(" ", end="") for l in range(self.__x)]
             for j in range(self.__width):
                 print("#", end="")
             print("")
 
     def __str__(self):
+        """Returns a string representation of a Rectangle instance."""
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.__x, self.__y, self.__width, self.__height))
 
     def to_dictionary(self):
+        """Returns the dictionary representation of a Rectangle."""
         attrs_dict = {
             "id": self.id, "width": self.width,
             "height": self.height, "x": self.x,
@@ -102,25 +105,25 @@ class Rectangle(Base):
                 if arg_count == 0:
                     self.id = arg
                 elif arg_count == 1:
-                    self.__width = arg
+                    self.width = arg
                 elif arg_count == 2:
-                    self.__height = arg
+                    self.height = arg
                 elif arg_count == 3:
-                    self.__x = arg
+                    self.x = arg
                 elif arg_count == 4:
-                    self.__y = arg
+                    self.y = arg
                 arg_count += 1
             return
         if kwargs is not None:
             for key, value in kwargs.items():
                 if key == "height":
-                    self.__height = value
+                    self.height = value
                 elif key == "width":
-                    self.__width = value
+                    self.width = value
                 elif key == "x":
-                    self.__x = value
+                    self.x = value
                 elif key == "y":
-                    self.__y = value
+                    self.y = value
                 elif key == "id":
                     self.id = value
             return

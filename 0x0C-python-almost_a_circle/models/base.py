@@ -12,8 +12,11 @@ class Base:
             Args:
                 id (int): the id of the object
         """
-        Base.__nb_objects += 1
-        self.id = id
+        if id is not None:
+            self.id = id
+        else:
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
 
     @property
     def id(self):
@@ -32,9 +35,9 @@ class Base:
         Args:
             list_dictionaries (list): a list of dictionaries
         """
-        if (len(list_dictionaries) == 0 or
+        if (list_dictionaries == [] or
            list_dictionaries is None):
-            return ('"[]"')
+            return ("[]")
         return json.dumps(list_dictionaries)
 
     @classmethod
@@ -44,23 +47,23 @@ class Base:
             list_objs (list of instances who inherit of Base): object
             filename (str): filename
         """
-        if list_objs is None:
-            list_objs = []
         filename = "{}.json".format(cls.__name__)
         with open(filename, mode="w", encoding="utf-8") as myfile:
-            list_dict = [ele.to_dictionary() for ele in list_objs]
-            myfile.write(Base.to_json_string(list_dict))
+            if list_objs is None:
+                myfile.write("[]")
+            else:
+                list_dict = [ele.to_dictionary() for ele in list_objs]
+                myfile.write(Base.to_json_string(list_dict))
 
     @staticmethod
     def from_json_string(json_string):
-        if (json_string is None or
-           len(json_string) == 0):
-            return []
-
         """ Returns an object represented by a JSON string
         Args:
             my_str (str): JSON string
         """
+        if (json_string is None or
+        len(json_string) == 0):
+            return []
         return json.loads(json_string)
 
     @classmethod
