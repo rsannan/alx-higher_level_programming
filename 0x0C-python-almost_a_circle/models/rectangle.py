@@ -133,4 +133,3 @@ class Rectangle(Base):
                 elif key == "id":
                     self.id = value
             return
-
