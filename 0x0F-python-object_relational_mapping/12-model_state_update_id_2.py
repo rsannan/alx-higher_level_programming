@@ -17,7 +17,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     sess = Session()
     for instance in sess.query(State).order_by(states.id):
-        if state.id == 2:
-            state.name = "New Mexico"
+        if instance.id == 2:
+            instance.name = "New Mexico"
             break
     session.commit()
