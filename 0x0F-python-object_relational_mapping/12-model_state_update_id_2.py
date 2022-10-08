@@ -15,8 +15,8 @@ if __name__ == "__main__":
     engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}"
                            .format(argv[1], argv[2], argv[3]))
     Session = sessionmaker(bind=engine)
-    sess = Session()
-    for instance in sess.query(State).order_by(states.id):
+    session = Session()
+    for instance in session.query(State):
         if instance.id == 2:
             instance.name = "New Mexico"
             break
