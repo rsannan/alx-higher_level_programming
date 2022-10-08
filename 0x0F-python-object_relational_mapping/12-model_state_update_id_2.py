@@ -16,7 +16,7 @@ if __name__ == "__main__":
                            .format(argv[1], argv[2], argv[3]))
     Session = sessionmaker(bind=engine)
     sess = Session()
-    for instance in sess.query(State), order_by(states.id):
+    for instance in sess.query(State).order_by(states.id):
         if state.id == 2:
             state.name = "New Mexico"
             break
