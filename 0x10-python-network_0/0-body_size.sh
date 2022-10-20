@@ -1,6 +1,3 @@
-#!/usr/bin/python3
-from sys import argv
-"""
-    sends a request to that URL, and displays the size of the body of the response
-"""
-curl https://argv[1]
+#!/bin/bash
+# ends a request to that URL displays the size of the response body
+curl -sI "$1" | grep -i Content-Length | cut -d " " -f2
