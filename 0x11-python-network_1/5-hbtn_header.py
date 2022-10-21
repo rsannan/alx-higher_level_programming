@@ -6,5 +6,6 @@ sends a request to the URL and displays the value of the variable X-Request-Id
 if __name__ == "__main__":
     import requests
     import sys
-    r = requests.get(sys.argv[1])
-    print(r.headers['X-Request-Id'])
+    url = sys.argv[1]
+    r = requests.get(url)
+    print(r.headers.get('X-Request-Id'))
