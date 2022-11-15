@@ -14,7 +14,7 @@ request(myArgs[0], function (error, response, body) {
     for (const film of allFilms) {
       const characters = film.characters;
       for (const val of characters) {
-        if (val === 'https://swapi-api.hbtn.io/api/people/18/') {
+        if (val.includes('18')) {
           count += 1;
         }
       }
